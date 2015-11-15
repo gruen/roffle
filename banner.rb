@@ -45,6 +45,7 @@ dates.each do |k,v|
       f.write "touch #{dt.strftime('%Y/%m')}/#{b}-#{dt.strftime('%Y-%m-%d-%H')}.roffles" + "\n"
       f.write "git add ." + "\n"
       f.write "git commit --date=\"#{dt.strftime('%a %b %d %H:%M %Y -0400')} -0400\" -m \"srsbznss on #{dt.strftime('%Y-%m-%d-%H')}\"" + "\n"
+      f.write "sleep .2\n"
       dt = dt+0.05 
     end
   end
