@@ -21,7 +21,7 @@ Magick::Image.read('boldergruen.png')[0].each_pixel do |pixel, col, row|
 end
 
 
-start_date = DateTime.parse("May 25 2014 06:00")
+start_date = DateTime.parse("Oct 4 2015 06:00")
 dates = Hash.new
 
 r.each do |k,v|
