@@ -41,7 +41,8 @@ dates.each do |k,v|
     
   unless b == 0
     ((b+1)*2).times do
-      f.write "touch #{b}-#{dt.strftime('%Y-%m-%d-%H')}.roffles" + "\n"
+      f.write "mkdir -p #{dt.strftime('%Y/%m')}\n"
+      f.write "touch #{dt.strftime('%Y/%m')}/#{b}-#{dt.strftime('%Y-%m-%d-%H')}.roffles" + "\n"
       f.write "git add ." + "\n"
       f.write "git commit --date=\"#{dt.strftime('%a %b %d %H:%M %Y -0400')} -0400\" -m \"srsbznss on #{dt.strftime('%Y-%m-%d-%H')}\"" + "\n"
       dt = dt+0.05 
